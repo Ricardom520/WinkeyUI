@@ -1,5 +1,5 @@
 <template>
-  <div class="Divider" ref="Divider">
+  <div class="Gird" ref="Gird">
     <div class="middle">
       <section class="box box1">
         <h2>Gird 栅格 </h2>
@@ -10,9 +10,179 @@
       <section class="box box2">
         <p class="p1">设计理念</p>
         <div class="gird-demo">
-          <wk-row>
-            <wk-col :span="24">100%</wk-col>
+          <wk-row class="demo-row">
+            <wk-col :span="24" class="demo-col demo-col-1">100%</wk-col>
           </wk-row>
+          <wk-row class="demo-row">
+            <wk-col :span="6" class="demo-col demo-col-2-1">25%</wk-col>
+            <wk-col :span="6" class="demo-col demo-col-2-2">25%</wk-col>
+            <wk-col :span="6" class="demo-col demo-col-2-3">25%</wk-col>
+            <wk-col :span="6" class="demo-col demo-col-2-4">25%</wk-col>
+          </wk-row>
+          <wk-row class="demo-row">
+            <wk-col :span="8" class="demo-col demo-col-3-1">33.33%</wk-col>
+            <wk-col :span="8" class="demo-col demo-col-3-2">33.33%</wk-col>
+            <wk-col :span="8" class="demo-col demo-col-3-3">33.33%</wk-col>
+          </wk-row>
+          <wk-row class="demo-row">
+            <wk-col :span="12" class="demo-col demo-col-4-1">50%</wk-col>
+            <wk-col :span="12" class="demo-col demo-col-4-2">50%</wk-col>
+          </wk-row>
+          <wk-row class="demo-row">
+            <wk-col :span="16" class="demo-col demo-col-5-1">66.66%</wk-col>
+            <wk-col :span="8" class="demo-col demo-col-5-2">33.33%</wk-col>
+          </wk-row>
+        </div>
+        <div class="desc">
+          <p class="p1">在多数业务情况下，Ant Design 需要在设计区域内解决大量信息收纳的问题，因此在 12 栅格系统的基础上，我们将整个设计建议区域按照 24 等分的原则进行划分。</p>
+          <p class="p2">划分之后的信息区块我们称之为『盒子』。建议横向排列的盒子数量最多四个，最少一个。『盒子』在整个屏幕上占比见上图。设计部分基于盒子的单位定制盒子内部的排版规则，以保证视觉层面的舒适感。</p>
+        </div>
+      </section>
+
+      <!--概述-->
+      <section class="box box3">
+        <p class="p1">概述</p>
+        <p>布局的栅格化系统，我们是基于行（row）和列（col）来定义信息区块的外部框架，以保证页面的每个区域能够稳健地排布起来。下面简单介绍一下它的工作原理：</p>
+        <div class="lists">
+          <ul>
+            <li>通过<span>row</span>在水平方向建立一组<span>column</span>（简写 col）</li>
+            <li>你的内容应当放置于<span>col</span>内，并且，只有<span>col</span>可以作为<span>row</span>的直接元素</li>
+            <li>栅格系统中的列是指 1 到 24 的值来表示其跨越的范围。例如，三个等宽的列可以使用<span><Col span={8} /></span>来创建</li>
+            <li>如果一个<span>row</span>中的<span>col</span>总和超过 24，那么多余的<span>col</span>会作为一个整体另起一行排列</li>
+          </ul>
+        </div>
+        <div class="desc">
+          <p>我们的栅格化系统基于 Flex 布局，允许子元素在父节点内的水平对齐方式 - 居左、居中、居右、等宽排列、分散排列。子元素与子元素之间，支持顶部对齐、垂直居中对齐、底部对齐的方式。同时，支持使用 order 来定义元素的排列顺序。</p>
+          <p>布局是基于 24 栅格来定义每一个『盒子』的宽度，但不拘泥于栅格。</p>
+        </div>
+      </section>
+
+      <!--基础使用-->
+      <section class="box box4">
+        <p class="p1">基础栅格</p>
+        <p>从堆叠到水平排列。</p>
+        <div class="container"  @mouseenter="mouseEnter('box4')" @mouseleave="mouseLeave('box4')">
+          <div class="demo">
+            <wk-row class="demo-row">
+              <wk-col :span="24" class="demo-col demo-1">col</wk-col>
+            </wk-row>
+            <wk-row class="demo-row">
+              <wk-col :span="12" class="demo-col demo-2-1">col-12</wk-col>
+              <wk-col :span="12" class="demo-col demo-2-2">col-12</wk-col>
+            </wk-row>
+            <wk-row class="demo-row">
+              <wk-col :span="8" class="demo-col demo-3-1">col-8</wk-col>
+              <wk-col :span="8" class="demo-col demo-3-2">col-8</wk-col>
+              <wk-col :span="8" class="demo-col demo-3-3">col-8</wk-col>
+            </wk-row>
+            <wk-row class="demo-row">
+              <wk-col :span="6" class="demo-col demo-4-1">col-6</wk-col>
+              <wk-col :span="6" class="demo-col demo-4-2">col-6</wk-col>
+              <wk-col :span="6" class="demo-col demo-4-3">col-6</wk-col>
+              <wk-col :span="6" class="demo-col demo-4-4">col-6</wk-col>
+            </wk-row>
+            <div class="content" :style="box4?{height: '410px'}:{height:'0px'}">
+              <div class="desc" v-html="baseContent"></div>
+              <div class="code">
+                <gird-base></gird-base>
+              </div>
+            </div>
+          </div>
+          <div class="showline" @click="showData('box4')">
+            <p>
+              <i :class="[box4Line?'hovering':'',box4?'active':'']"></i>
+              <transition name="fade">
+                <span v-if="box4Line">{{box4?'隐藏代码':'展示代码'}}</span>
+              </transition>
+            </p> 
+          </div>
+        </div>
+      </section>
+
+      <!--区块间隔-->
+      <section class="box box5">
+        <p class="p1">区块间隔</p>
+        <p>使区块产生一些间隔。</p>
+        <div class="container"  @mouseenter="mouseEnter('box5')" @mouseleave="mouseLeave('box5')">
+          <div class="demo">
+            <wk-divider orientation="left">
+              Horizontal
+            </wk-divider>
+            <wk-row class="demo-row" :gutter="16">
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+            </wk-row>
+             <wk-divider orientation="left">
+              Responsive
+            </wk-divider>
+            <wk-row class="demo-row" :gutter="{xs: 8, sm: 16, md: 24, lg: 32}">
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+            </wk-row>
+            <wk-divider orientation="left">
+              Vertical
+            </wk-divider>
+            <wk-row class="demo-row" :gutter="[16, 24]">
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+              <wk-col :span="6" class="demo-col">
+                <div>col-6</div>
+              </wk-col>
+            </wk-row>
+            <div class="content" :style="box5?{height: '1134px'}:{height:'0px'}">
+              <div class="desc" v-html="gutterContent"></div>
+              <div class="code">
+                <girdGutter></girdGutter>
+              </div>
+            </div>
+          </div>
+          <div class="showline" @click="showData('box5')">
+            <p>
+              <i :class="[box5Line?'hovering':'',box5?'active':'']"></i>
+              <transition name="fade">
+                <span v-if="box5Line">{{box5?'隐藏代码':'展示代码'}}</span>
+              </transition>
+            </p> 
+          </div>
         </div>
       </section>
     </div>
@@ -21,10 +191,10 @@
     <div class="anchor" ref="anchor">
       <ul>
         <li @click="returnTop($event,'#box2')">
-          基础方法
+          设计理念
         </li>
         <li @click="returnTop($event,'#box3')">
-          分割文字
+          概述
         </li>
         <li @click="returnTop($event,'#box4')">
           虚化文字
@@ -38,6 +208,8 @@
 </template>
 
 <script>
+import girdBase from '@/assets/markdown/gird/girdBase.md'
+import girdGutter from '@/assets/markdown/gird/girdGutter.md'
 import marked from 'marked'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/atom-one-dark.css'
@@ -68,10 +240,6 @@ export default {
   name: 'icon',
   data() {
     return {
-      box2Line: false,
-      box2: false,
-      box3Line: false,
-      box3: false,
       box4Line: false,
       box4: false,
       box5Line: false,
@@ -79,32 +247,23 @@ export default {
     }
   },
   components: {
-    
+    girdBase,
+    girdGutter,
   },
   mounted() {
     highlightCode()
   },
   computed: {
     baseContent: function() {
-      let detail = '默认为水平分割线，`dashed`可使分割线变为虚线，可在中间加入文字。';
+      let detail = '使用单一的一组 `Row` 和 `Col` 栅格组件，就可以创建一个基本的栅格系统，所有列（Col）必须放在 Row 内。';
         return marked(detail || '', {
           sanitize: true
         });
     },
-    divisionContent: function() {
-      let detail = '分割线中带有文字，可以用 `orientation` 指定文字位置。';
-        return marked(detail || '', {
-          sanitize: true
-        });
-    },
-    plainContent: function() {
-      let detail = '虚化分割线中带有文字，可以用 `plain` 来处理。';
-        return marked(detail || '', {
-          sanitize: true
-        });
-    },
-    veriticalContent: function() {
-      let detail = '使用 type=`"vertical"` 设置为行内的垂直分割线。';
+    gutterContent: function() {
+      let detail = `栅格常常需要和间隔进行配合，你可以使用 \`Row\` 的 \`gutter\` 属性，我们推荐使用 \`(16+8n)px\` 作为栅格间隔。(n 是自然数)
+                    如果要支持响应式，可以写成 \`{ xs: 8, sm: 16, md: 24, lg: 32 }\`。
+                    如果需要垂直间距，可以写成数组形式 \`[水平间距, 垂直间距]\` \`[16, { xs: 8, sm: 16, md: 24, lg: 32 }]\`。`;
         return marked(detail || '', {
           sanitize: true
         });
@@ -112,7 +271,7 @@ export default {
   },
   methods: {
     returnTop(e,box) {
-      let Button = this.$refs.Divider;
+      let Button = this.$refs.Gird;
       let anchor = this.$refs.anchor;
       let lis = anchor.getElementsByTagName('li');
       let target = e.target;
@@ -126,12 +285,6 @@ export default {
     },
     mouseEnter(box) {
       switch(box) {
-        case 'box2':
-          this.box2Line = true;
-          break;
-        case 'box3':
-          this.box3Line = true;
-          break;
         case 'box4':
           this.box4Line = true;
           break;
@@ -142,12 +295,6 @@ export default {
     },
     mouseLeave(box) {
       switch(box) {
-        case 'box2':
-          this.box2Line = false;
-          break;
-        case 'box3':
-          this.box3Line = false;
-          break;
         case 'box4':
           this.box4Line = false;
           break;
@@ -158,12 +305,6 @@ export default {
     },
     showData(box) {
       switch(box) {
-        case 'box2':
-          this.box2 = !this.box2;
-          break;
-        case 'box3':
-          this.box3 = !this.box3;
-          break;
         case 'box4':
           this.box4 = !this.box4;
           break;
@@ -178,11 +319,12 @@ export default {
 
 
 <style lang="less" scoped>
-.Divider {
+.Gird {
   display: flex;
   width: 100%;
   margin-bottom: 20px;
   .middle {
+    min-width: 1000px;
     width: 89%;
   }
   .box {
@@ -287,6 +429,122 @@ export default {
   }
   .box2 {
     margin-top: 50px;
+    .gird-demo {
+      margin-top: 20px;
+      .demo-row {
+        margin-bottom: 8px;
+        overflow: hidden;
+        background-image: linear-gradient(90deg,#f5f5f5 4.16666667%,transparent 4.16666667%,transparent 8.33333333%,#f5f5f5 8.33333333%,#f5f5f5 12.5%,transparent 12.5%,transparent 16.66666667%,#f5f5f5 16.66666667%,#f5f5f5 20.83333333%,transparent 20.83333333%,transparent 25%,#f5f5f5 25%,#f5f5f5 29.16666667%,transparent 29.16666667%,transparent 33.33333333%,#f5f5f5 33.33333333%,#f5f5f5 37.5%,transparent 37.5%,transparent 41.66666667%,#f5f5f5 41.66666667%,#f5f5f5 45.83333333%,transparent 45.83333333%,transparent 50%,#f5f5f5 50%,#f5f5f5 54.16666667%,transparent 54.16666667%,transparent 58.33333333%,#f5f5f5 58.33333333%,#f5f5f5 62.5%,transparent 62.5%,transparent 66.66666667%,#f5f5f5 66.66666667%,#f5f5f5 70.83333333%,transparent 70.83333333%,transparent 75%,#f5f5f5 75%,#f5f5f5 79.16666667%,transparent 79.16666667%,transparent 83.33333333%,#f5f5f5 83.33333333%,#f5f5f5 87.5%,transparent 87.5%,transparent 91.66666667%,#f5f5f5 91.66666667%,#f5f5f5 95.83333333%,transparent 95.83333333%);
+        .demo-col {
+          color: #fff;
+          font-size: 18px;
+          text-align: center;
+          min-height: 30px;
+          margin-top: 0;
+          margin-bottom: 0;
+          padding: 38px 0;
+          border: none;
+        }
+        .demo-col-1 {
+          background-color: rgba(0, 146, 255, .75);
+        }
+        .demo-col-2-1,.demo-col-2-3 {
+          background-color: rgba(0,146,255,.5);
+        }
+        .demo-col-2-2,.demo-col-2-4 {
+          color: #999DA5;
+        }
+        .demo-col-3-1,.demo-col-3-3 {
+          background-color: rgba(0,146,255,.5);
+        }
+        .demo-col-3-2 {
+          color: #999DA5;
+        }
+        .demo-col-4-1 {
+          background-color: rgba(0, 146, 255, .75);
+        }
+        .demo-col-4-2 {
+          color: #999DA5;
+        }
+        .demo-col-5-1 {
+          background-color: rgba(0,146,255,.5);
+        }
+        .demo-col-5-2 {
+          color: #999DA5;
+        }
+      }
+    }
+    .desc {
+      margin-top: 30px;
+      p {
+        color: #5E6D82;
+        font-size: 16px;
+        line-height: 25px;
+      }
+    }
+  }
+  .box3 {
+    margin-top: 50px;
+    p {
+      font-size: 16px;
+      line-height: 25px;
+    }
+    .lists {
+      li {
+        list-style: circle;
+        padding: 10px 5px;
+        margin: 0 20px;
+      }
+    }
+    .desc {
+      margin-top: 30px;
+      p {
+        color: #5E6D82;
+        font-size: 16px;
+        line-height: 25px;
+        padding: 5px 0;
+      }
+    }
+    span {
+      padding: 3px 5px;
+      margin: 0 3px;
+      background-color: #F2F4F5;
+    }
+  }
+  .box4 {
+    margin-top: 50px;
+    .container {
+      .demo-row {
+        margin: 10px 0;
+        .demo-col {
+          color: #fff;
+          text-align: center;
+          padding: 18px 0;
+        }
+        .demo-1,.demo-2-1,.demo-3-1,.demo-3-3,.demo-4-1,.demo-4-3 {
+          background-color: #40ADFF;
+        }
+        .demo-2-2,.demo-3-2,.demo-4-2,.demo-4-4 {
+          background-color: #0092FF;
+        }
+      }
+    }
+  }
+  .box5 {
+    margin-top: 50px;
+    .container {
+      .demo-row {
+        margin: 10px 0;
+        .demo-col {
+          color: #fff;
+          text-align: center;
+          div {
+            padding: 10px 0;
+            background-color: #0092FF;
+          }
+        }
+      }
+    }
   }
   .anchor {
     width: 150px;
@@ -306,30 +564,6 @@ export default {
     li:hover {
       cursor: pointer;
       color: #489FFF;
-    }
-  }
-}
-</style>
-
-<style lang="less">
-.Divider {
-  .code {
-    pre {
-      overflow-x: scroll;
-    }
-    pre::-webkit-scrollbar {
-      width: 4px;
-      height: 4px;
-    }
-    pre::-webkit-scrollbar-thumb {
-      border-radius: 5px;
-      -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.1);
-      background: rgba(0, 0, 0, .1)
-    }
-    pre::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.1);
-      border-radius: 0;
-      background: rgba(0, 0, 0, .05);
     }
   }
 }
