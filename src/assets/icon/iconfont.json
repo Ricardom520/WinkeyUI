@@ -1,0 +1,79 @@
+{
+  "id": "1799220",
+  "name": "winkUI",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "167188",
+      "name": "上传",
+      "font_class": "shangchuan",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "1056577",
+      "name": "分享",
+      "font_class": "fenxiang",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    },
+    {
+      "icon_id": "2966206",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "5876976",
+      "name": "垃圾箱",
+      "font_class": "biaoqing",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "6263355",
+      "name": "收藏",
+      "font_class": "shoucang",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "8288885",
+      "name": "信封",
+      "font_class": "xinfeng",
+      "unicode": "e857",
+      "unicode_decimal": 59479
+    },
+    {
+      "icon_id": "9402940",
+      "name": "对",
+      "font_class": "changyongicon-",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "13646271",
+      "name": "写字",
+      "font_class": "xiezi",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "1951950",
+      "name": "成功",
+      "font_class": "chenggong",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "5183598",
+      "name": "警告",
+      "font_class": "icon-test",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    }
+  ]
+}

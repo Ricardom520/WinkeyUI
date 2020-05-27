@@ -1,0 +1,290 @@
+{
+  "lists": [
+    {
+      "id": 110,
+      "title": "通用",
+      "children": [
+        {
+          "id": 1100,
+          "title": "Button 按钮",
+          "path": "/rooms/components/button"
+        },
+        {
+          "id": 1101,
+          "title": "Icon 图标",
+          "path": "/rooms/components/icon"
+        },
+        {
+          "id": 1102,
+          "title": "Typography 排版"
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "title": "布局",
+      "children": [
+        {
+          "id": 1110,
+          "title": "Divider 分割线",
+          "path": "/rooms/components/divider"
+        },
+        {
+          "id": 1111,
+          "title": "Gird 栅格",
+          "path": "/rooms/components/gird"
+        },
+        {
+          "id": 1112, 
+          "title": "Layout 布局"
+        },
+        {
+          "id": 1113,
+          "title": "Space 间距"
+        }
+      ]
+    },
+    {
+      "id": "112",
+      "title": "导航",
+      "children": [
+        {
+          "id": 1120,
+          "title": "Affix 固钉"
+        },
+        {
+          "id": 1121,
+          "title": "Breadcrumb 面包屑"
+        },
+        {
+          "id": 1122,
+          "title": "Dropdown 下拉菜单"
+        },
+        {
+          "id": 1123, 
+          "title": "Menu 导航菜单"
+        },
+        {
+          "id": 1124,
+          "title": "Pagination 分页"
+        },
+        {
+          "id": 1125,
+          "title": "PageHeader 也偷"
+        },
+        {
+          "id": 1126,
+          "title": "Steps 步骤条"
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "title": "数据录入",
+      "children": [
+        {
+          "id": 1130,
+          "title": "AutoComplete 自动完成"
+        },
+        {
+          "id": 1131,
+          "title": "Checkbox 多选框"
+        },
+        {
+          "id": 1132,
+          "title": "Cascader 联级选择"
+        },
+        {
+          "id": 1133,
+          "title": "DatePicker 日期选择框"
+        },
+        {
+          "id": 1134,
+          "title": "Form 表单"
+        },
+        {
+          "id": 1135,
+          "title": "InputNumber 数字输入框"
+        },
+        {
+          "id": 1136,
+          "title": "Input 输入框"
+        },
+        {
+          "id": 1137,
+          "title": "Mentions 提及"
+        },
+        {
+          "id": 1138,
+          "title": "Radio 单选框"
+        },
+        {
+          "id": 1139,
+          "title": "Switch 开关"
+        },
+        {
+          "id": 1140,
+          "title": "Slider 滑动输入条"
+        },
+        {
+          "id": 1141,
+          "title": "Select 选择题"
+        },
+        {
+          "id": 1142,
+          "title": "TreeSelect 树选择"
+        },
+        {
+          "id": 1143,
+          "title": "Transfer 穿梭框"
+        },
+        {
+          "id": 1145,
+          "title": "TimePicker 时间选择框"
+        },
+        {
+          "id": 1146,
+          "title": "Upload 上传"
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "title": "数据展示",
+      "children": [
+        {
+          "id": 1140,
+          "title": "Avatar 头像"
+        },
+        {
+          "id": 1141,
+          "title": "Badge 徽标数"
+        },
+        {
+          "id": 1142,
+          "title": "Comment 评论"
+        },
+        {
+          "id": 1143,
+          "title": "Collapse 折叠面板"
+        },
+        {
+          "id": 1144,
+          "title": "Carousel 走马灯"
+        },
+        {
+          "id": 1145,
+          "title": "Card 卡片"
+        },
+        {
+          "id": 1146,
+          "title": "Calendar 日历"
+        },
+        {
+          "id": 1147,
+          "title": "Descriptions 描述列表"
+        },
+        {
+          "id": 1148,
+          "title": "Empty 空状态"
+        },
+        {
+          "id": 1149,
+          "title": "List 列表"
+        },
+        {
+          "id": 1150,
+          "title": "Propover 气泡卡片"
+        },
+        {
+          "id": 1151,
+          "title": "Statistic 统计数值"
+        },
+        {
+          "id": 1152,
+          "title": "Tree 树形控件"
+        },
+        {
+          "id": 1153,
+          "title": "Tooltip 文字提示"
+        },
+        {
+          "id": 1154,
+          "title": "Timeline 时间戳"
+        },
+        {
+          "id": 1155,
+          "title": "Tag 标签"
+        },
+        {
+          "id": 1156,
+          "title": "Tabs 标签页"
+        },
+        {
+          "id": 1157,
+          "title": "Table 表格"
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "title": "反馈",
+      "children": [
+        {
+          "id": 1150,
+          "title": "Alert 警告提示"
+        },
+        {
+          "id": 1151,
+          "title": "Drawer 抽屉"
+        },
+        {
+          "id": 1152,
+          "title": "Message 全局提示"
+        },
+        {
+          "id": 1153,
+          "title": "Notification 通知提醒框"
+        },
+        {
+          "id": 1154,
+          "title": "Progress 进度条"
+        },
+        {
+          "id": 1155,
+          "title": "Popconfirm 气泡确认框"
+        },
+        {
+          "id": 1156,
+          "title": "Result 结果"
+        },
+        {
+          "id": 1157,
+          "title": "Spin 加载中"
+        },
+        {
+          "id": 1158,
+          "title": "Skeleton 骨架屏"
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "title": "其他",
+      "children": [
+        {
+          "id": 1160,
+          "title": "Anchor 锚点"
+        },
+        {
+          "id": 1161,
+          "title": "BackTop 回到顶部"
+        },
+        {
+          "id": 1162,
+          "title": "ConfigProvider 全局化配置"
+        }
+      ]
+    }
+  ]
+}

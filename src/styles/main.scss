@@ -1,0 +1,204 @@
+
+.main-container{
+  position: absolute;
+  left: $sidebar-width;
+  top: $header-height;
+  right: 0;
+  bottom: 0;
+  transition: left .28s;
+
+
+  .app-main{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+  }
+
+  &.hasTagsView{
+    .app-main{
+      top: $tagsViewHeight;
+      min-height: calc(100% - #{$header-height} - #{$tagsViewHeight});
+    }
+
+    .fixed-header+.app-main {
+      padding-top: $header-height + $tagsViewHeight;
+    }
+  }
+}
+
+
+// tags-view
+.tags-view-container {
+  height: $tagsViewHeight;
+  width: 100%;
+  background: #eee;
+  box-shadow: 0 -3px 4px 0 inset rgba(0, 0, 0, 0.03);
+  overflow-y: hidden;
+
+  /deep/ .el-scrollbar__view {
+    padding: 0 6px;
+  }
+
+  .tags-view-wrapper {
+    .tags-view-item {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      height: $tagsViewHeight;
+      line-height: $tagsViewHeight;
+      min-width: 100px;
+      width: 140px;
+      padding: 0 15px;
+      color: #495060;
+      font-size: 13px;
+      border-radius: 6px 6px 0 0;
+      transition: background .4s;
+      user-select: none;
+
+
+      &.active {
+        position: relative;
+        background-color: #fff;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+        color: #333;
+        z-index: 3;
+
+        &::after {
+          display: none;
+        }
+
+        & + .tags-view-item::after {
+          display: none;
+        }
+
+        .tags-view-item__svg-left,
+        .tags-view-item__svg-right{
+          fill: #fff;
+        }
+      }
+
+      &:hover {
+        background-color: #fafafa;
+        z-index: 1;
+        .tags-view-item__svg-left,
+        .tags-view-item__svg-right{
+          transition: fill .4s;
+          fill: #fafafa;
+        }
+        &::after,
+        & + .tags-view-item::after{
+          background-color: transparent;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 25%;
+        bottom: 25%;
+        width: 1px;
+        background-color: #ccc;
+        transition: background .4s;
+      }
+
+      &:first-of-type::after {
+        display: none;
+      }
+
+      .tags-view-item__svg-left{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 6px;
+        height: 6px;
+        margin-left: -6px;
+        fill: transparent;
+      }
+      .tags-view-item__svg-right{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 6px;
+        height: 6px;
+        margin-right: -6px;
+        transform: rotate(90deg);
+        fill: transparent;
+      }
+    }
+  }
+
+  .contextmenu {
+    min-width: 150px;
+    margin: 0;
+    background: #fff;
+    z-index: 3000;
+    position: absolute;
+    list-style-type: none;
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 4px;
+    color: #333;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+
+    li {
+      margin: 0;
+      padding: 7px 20px;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:hover {
+        background: $bgc-light-blue;
+        color: $primary;
+      }
+    }
+  }
+
+  .scroll-container {
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /deep/ {
+      .el-scrollbar__bar {
+        bottom: 0px;
+      }
+      .el-scrollbar__wrap {
+        height: $tagsViewHeight + 15px;
+      }
+    }
+  }
+}
+
+//reset element css of el-icon-close
+.tags-view-wrapper {
+  .tags-view-item {
+    .el-icon-close {
+      float: right;
+      width: 16px;
+      height: 16px;
+      margin-top: ($tagsViewHeight - 16px)/2;
+      font-size: 12px;
+      line-height: 16px;
+      vertical-align: 1px;
+      border-radius: 50%;
+      text-align: center;
+      transform: translateX(5px);
+      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transform-origin: 100% 50%;
+      &:before {
+        // transform: scale(0.9);
+        display: inline-block;
+        vertical-align: -1px;
+      }
+      &:hover {
+        background-color: #b4bccc;
+        color: #fff;
+      }
+    }
+  }
+}

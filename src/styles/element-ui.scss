@@ -1,0 +1,159 @@
+// cover some element-ui styles
+
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  font-weight: 400 !important;
+}
+
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+.cell {
+  .el-tag {
+    margin-right: 0px;
+  }
+}
+
+.small-padding {
+  .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.fixed-width {
+  .el-button--mini {
+    padding: 7px 10px;
+    width: 60px;
+  }
+}
+
+.status-col {
+  .cell {
+    padding: 0 10px;
+    text-align: center;
+
+    .el-tag {
+      margin-right: 0px;
+    }
+  }
+}
+
+// to fixed https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+// refine element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+// dropdown
+.el-dropdown-menu {
+  a {
+    display: block
+  }
+}
+
+// fix date-picker ui bug in filter-item
+.el-range-editor.el-input__inner {
+  display: inline-flex !important;
+}
+
+
+.el-drawer__wrapper{
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+
+  .el-drawer__header{
+    line-height: 22px;
+    outline: none;
+
+    & > span{
+      color: #333;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    & > * {
+      outline: none;
+    }
+  }
+}
+
+// table
+.el-table--medium tr{
+  th,td{
+
+    .cell{
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .el-button--text{
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.el-checkbox__input.is-checked + span.el-checkbox__label{
+  color: #333;
+}
+
+// card
+.el-card{
+  
+  &.is-always-shadow {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .02);
+    // box-shadow: none;
+  }
+
+  & + .el-card{
+    margin-top: 20px;
+  }
+}
+
+.el-message{
+  min-width: 200px;
+  margin-top: -16px;
+  padding: 8px 10px 8px 12px;
+}
+
+
+// 配置dialog
+.el-dialog__wrapper{
+  overflow: hidden !important;
+
+  .el-dialog{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 0 !important;
+    max-height: 80%;
+    transform: translate(-50%, -50%);
+
+    .el-dialog__body{
+      overflow: auto;
+    }
+  }
+}
