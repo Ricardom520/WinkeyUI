@@ -1,6 +1,7 @@
 <template>
   <div :class="[
                 span ?'wk-col ' + `wk-col-${span}` : 'wk-col-24',
+                offset ? `wk-col-offset-${offset}` : '',
                 ]"
         :style="style"
   >
@@ -15,6 +16,10 @@ export default {
     span: {
       type: Number,
       default: 24,
+    },
+    offset: {
+      type: Number,
+      default: 0
     }
   },
   data() {
@@ -74,5 +79,16 @@ export default {
 }
 .wk-col-16 {
   max-width: 66.66%;
+}
+.wk-col-4 {
+  max-width: 16.6666667%;
+}
+
+/**   偏移量    */
+.wk-col-offset-8 {
+  margin-left: 33.3333333%;
+}
+.wk-col-offset-6 {
+  margin-left: 25%;
 }
 </style>

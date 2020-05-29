@@ -7,7 +7,7 @@
       </section>
 
       <!--设计理念-->
-      <section class="box box2">
+      <section class="box box2" id="box2">
         <p class="p1">设计理念</p>
         <div class="gird-demo">
           <wk-row class="demo-row">
@@ -40,7 +40,7 @@
       </section>
 
       <!--概述-->
-      <section class="box box3">
+      <section class="box box3" id="box3">
         <p class="p1">概述</p>
         <p>布局的栅格化系统，我们是基于行（row）和列（col）来定义信息区块的外部框架，以保证页面的每个区域能够稳健地排布起来。下面简单介绍一下它的工作原理：</p>
         <div class="lists">
@@ -58,7 +58,7 @@
       </section>
 
       <!--基础使用-->
-      <section class="box box4">
+      <section class="box box4" id="box4">
         <p class="p1">基础栅格</p>
         <p>从堆叠到水平排列。</p>
         <div class="container"  @mouseenter="mouseEnter('box4')" @mouseleave="mouseLeave('box4')">
@@ -100,7 +100,7 @@
       </section>
 
       <!--区块间隔-->
-      <section class="box box5">
+      <section class="box box5" id="box5">
         <p class="p1">区块间隔</p>
         <p>使区块产生一些间隔。</p>
         <div class="container"  @mouseenter="mouseEnter('box5')" @mouseleave="mouseLeave('box5')">
@@ -185,6 +185,126 @@
           </div>
         </div>
       </section>
+
+      <!--左右偏移-->
+      <section class="box box6" id="box6">
+        <p class="p1">左右偏移</p>
+        <p>列偏移。</p>
+        <div class="container"  @mouseenter="mouseEnter('box6')" @mouseleave="mouseLeave('box6')">
+          <div class="demo">
+            <wk-row class="demo-row">
+              <wk-col :span="8" class="demo-col demo-col-1">
+                col-8
+              </wk-col>
+              <wk-col :span="8" class="demo-col demo-col-2" :offset="8">
+                col-8
+              </wk-col>
+            </wk-row>
+            <wk-row class="demo-row">
+              <wk-col :span="6" class="demo-col demo-col-2-1" :offset="6">
+                col-6 col-offset-6
+              </wk-col>
+              <wk-col :span="6" class="demo-col demo-col-2-2" :offset="6">
+                col-6 col-offset-6
+              </wk-col>
+            </wk-row>
+            <wk-row class="demo-row">
+              <wk-col :span="12" class="demo-col demo-col-2-1" :offset="6">
+                col-12 col-offset-6
+              </wk-col>
+            </wk-row>
+            <div class="content" :style="box6?{height: '465px'}:{height:'0px'}">
+              <div class="desc" v-html="offsetContent"></div>
+              <div class="code">
+                <girdOffset></girdOffset>
+              </div>
+            </div>
+          </div>
+          <div class="showline" @click="showData('box6')">
+            <p>
+              <i :class="[box6Line?'hovering':'',box6?'active':'']"></i>
+              <transition name="fade">
+                <span v-if="box6Line">{{box6?'隐藏代码':'展示代码'}}</span>
+              </transition>
+            </p> 
+          </div>
+        </div>
+      </section>
+
+      <!--对齐-->
+      <section class="box box7" id="box7">
+        <p class="p1">对齐</p>
+        <p>对齐。</p>
+        <div class="container"  @mouseenter="mouseEnter('box7')" @mouseleave="mouseLeave('box7')">
+          <div class="demo">
+            <wk-divider orientation="left">Align Top</wk-divider>
+            <wk-row class="demo-row" justify="center" align="top">
+              <wk-col :span="4" class="demo-col demo-col-1-1">
+                col-4
+              </wk-col>
+              <wk-col :span="4" class="demo-col demo-col-1-2">
+                col-4
+              </wk-col>
+              <wk-col :span="4" class="demo-col demo-col-1-3">
+                col-4
+              </wk-col>
+              <wk-col :span="4" class="demo-col demo-col-1-4">
+                col-4
+              </wk-col>
+            </wk-row>
+            <wk-divider orientation="left">Align Middle</wk-divider>
+            <wk-row class="demo-row" justify="space-around" align="middle">
+              <wk-col :span="4" class="demo-col demo-col-1-1">
+                col-4
+              </wk-col>
+              <wk-col :span="4" class="demo-col demo-col-1-2">
+                col-4
+              </wk-col>
+              <wk-col :span="4" class="demo-col demo-col-1-3">
+                col-4
+              </wk-col>
+              <wk-col :span="4" class="demo-col demo-col-1-4">
+                col-4
+              </wk-col>
+            </wk-row>
+            <wk-divider orientation="left">Align Bottom</wk-divider>
+            <wk-row class="demo-row" justify="space-between" align="bottom">
+              <wk-col :span="4" class="demo-col demo-col-1-1">
+                col-4
+              </wk-col>
+              <wk-col :span="4" class="demo-col demo-col-1-2">
+                col-4
+              </wk-col>
+              <wk-col :span="4" class="demo-col demo-col-1-3">
+                col-4
+              </wk-col>
+              <wk-col :span="4" class="demo-col demo-col-1-4">
+                col-4
+              </wk-col>
+            </wk-row>
+            <div class="content" :style="box7?{height: '825px'}:{height:'0px'}">
+              <div class="desc" v-html="alignmentContent"></div>
+              <div class="code">
+                <girdAlignment></girdAlignment>
+              </div>
+            </div>
+          </div>
+          <div class="showline" @click="showData('box7')">
+            <p>
+              <i :class="[box7Line?'hovering':'',box7?'active':'']"></i>
+              <transition name="fade">
+                <span v-if="box7Line">{{box7?'隐藏代码':'展示代码'}}</span>
+              </transition>
+            </p> 
+          </div>
+        </div>
+      </section>
+
+      <!--文本描述-->
+      <section class="box box8" id="box8">
+        <p class="p1">Attributes</p>
+        <girdRead></girdRead>
+      </section>
     </div>
 
     <!--锚点-->
@@ -197,10 +317,19 @@
           概述
         </li>
         <li @click="returnTop($event,'#box4')">
-          虚化文字
+          基础栅格
         </li>
         <li @click="returnTop($event,'#box5')">
-          垂直分割
+          区块间隔
+        </li>
+        <li @click="returnTop($event,'#box6')">
+          左右偏移
+        </li>
+        <li @click="returnTop($event,'#box7')">
+          对齐
+        </li>
+        <li @click="returnTop($event, '#box8')">
+          Attributes
         </li>
       </ul>
     </div>
@@ -210,6 +339,9 @@
 <script>
 import girdBase from '@/assets/markdown/gird/girdBase.md'
 import girdGutter from '@/assets/markdown/gird/girdGutter.md'
+import girdOffset from '@/assets/markdown/gird/girdOffset.md'
+import girdAlignment from '@/assets/markdown/gird/girdAlignment.md'
+import girdRead from '@/assets/markdown/gird/girdRead.md'
 import marked from 'marked'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/atom-one-dark.css'
@@ -244,11 +376,18 @@ export default {
       box4: false,
       box5Line: false,
       box5: false,
+      box6Line: false,
+      box6: false,
+      box7Line: false,
+      box7: false,
     }
   },
   components: {
     girdBase,
     girdGutter,
+    girdOffset,
+    girdAlignment,
+    girdRead,
   },
   mounted() {
     highlightCode()
@@ -268,6 +407,18 @@ export default {
           sanitize: true
         });
     },
+    offsetContent: function() {
+      let detail = '使用 `offset` 可以将列向右侧偏。例如，`offset={4}` 将元素向右侧偏移了 4 个列（column）的宽度。';
+        return marked(detail || '', {
+          sanitize: true
+        });
+    },
+    alignmentContent: function() {
+      let detail = '子元素垂直对齐。';
+        return marked(detail || '', {
+          sanitize: true
+        });
+    }
   },
   methods: {
     returnTop(e,box) {
@@ -291,6 +442,12 @@ export default {
         case 'box5':
           this.box5Line = true;
           break;
+        case 'box6':
+          this.box6Line = true;
+          break;
+        case 'box7':
+          this.box7Line = true;
+          break;
       }
     },
     mouseLeave(box) {
@@ -301,6 +458,12 @@ export default {
         case 'box5':
           this.box5Line = false;
           break;
+        case 'box6':
+          this.box6Line = false;
+          break;
+        case 'box7':
+          this.box7Line = false;
+          break;
       }
     },
     showData(box) {
@@ -310,6 +473,12 @@ export default {
           break;
         case 'box5':
           this.box5 = !this.box5;
+          break;
+        case 'box6':
+          this.box6 = !this.box6;
+          break;
+        case 'box7':
+          this.box7 = !this.box7;
           break;
       }
     }
@@ -546,6 +715,57 @@ export default {
       }
     }
   }
+  .box6 {
+    margin-top: 50px;
+    .container {
+      .demo-row {
+        margin: 15px 0;
+        .demo-col {
+          color: #fff;
+          text-align: center;
+          padding: 20px 0 ;
+        }
+        .demo-col-1,.demo-col-2-1 {
+          background-color: #40ADFF;
+        }
+        .demo-col-2,.demo-col-2-2 {
+          background-color: #0092FF;
+        }
+      }
+    }
+  }
+  .box7 {
+    margin-top: 50px;
+    .container {
+      .demo-row {
+        padding: 10px 0;
+        background-color: #F5F5F5;
+        .demo-col {
+          color: #fff;
+          text-align: center;
+        }
+        .demo-col-1-1 {
+          padding: 50px 0 ;
+          background-color: #3DAAFC;
+        }
+        .demo-col-1-3 {
+          padding: 70px 0 ;
+          background-color: #3DAAFC;
+        }
+        .demo-col-1-2 {
+          padding: 30px 0 ;
+          background-color: #0092FF;
+        }
+        .demo-col-1-4 {
+          padding: 40px 0 ;
+          background-color: #0092FF;
+        }
+      }
+    }
+  }
+  .box8 {
+    margin-top: 50px;
+  }
   .anchor {
     width: 150px;
     margin-left: 30px;
@@ -568,3 +788,39 @@ export default {
   }
 }
 </style>
+
+<style lang="less">
+.Gird {
+  .box8 {
+    h3 {
+      margin-top: 26px;
+      padding: 20px 0;
+    }
+    section {
+      table {
+        width: 100%;
+        tr {
+          display: block;
+          border-bottom: 1px solid #DCDFE6;
+          padding: 15px 0;
+        }
+        th {
+          display: inline-block;
+          color: #909399;
+          font-size: 16px;
+          font-weight: 400;
+          text-align: left;
+          padding: 0 10px;
+        }
+        td {
+          display: inline-block;
+          color: #606266;
+          font-size: 14px;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
+</style>
+

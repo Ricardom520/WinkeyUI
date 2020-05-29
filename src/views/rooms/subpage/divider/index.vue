@@ -133,6 +133,12 @@
           </div>
         </div>
       </section>
+
+      <!--文本描述-->
+      <section class="box box6" id="box6">
+        <p class="p1">Attributes</p>
+        <divider-read></divider-read>
+      </section>
     </div>
 
     <!--锚点-->
@@ -150,6 +156,9 @@
         <li @click="returnTop($event,'#box5')">
           垂直分割
         </li>
+        <li @click="returnTop($event, '#box6')">
+          Attributes
+        </li>
       </ul>
     </div>
   </div>
@@ -161,6 +170,7 @@ import dividerBase from '@/assets/markdown/divider/dividerBase.md'
 import dividerDivision from '@/assets/markdown/divider/dividerDivision.md'
 import dividerPlain from '@/assets/markdown/divider/dividerPlain.md'
 import dividerVeritical from '@/assets/markdown/divider/dividerVertical.md'
+import dividerRead from '@/assets/markdown/divider/dividerRead.md'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/atom-one-dark.css'
 marked.setOptions({
@@ -205,6 +215,7 @@ export default {
     dividerDivision,
     dividerPlain,
     dividerVeritical,
+    dividerRead,
   },
   mounted() {
     highlightCode()
@@ -427,6 +438,9 @@ export default {
       }
     }
   }
+  .box6 {
+    margin-top: 50px;
+  }
   .anchor {
     width: 150px;
     margin-left: 30px;
@@ -473,3 +487,39 @@ export default {
   }
 }
 </style>
+
+<style lang="less">
+.Divider {
+  .box6 {
+    h3 {
+      margin-top: 26px;
+      padding: 20px 0;
+    }
+    section {
+      table {
+        width: 100%;
+        tr {
+          display: block;
+          border-bottom: 1px solid #DCDFE6;
+          padding: 15px 0;
+        }
+        th {
+          display: inline-block;
+          color: #909399;
+          font-size: 16px;
+          font-weight: 400;
+          text-align: left;
+          padding: 0 10px;
+        }
+        td {
+          display: inline-block;
+          color: #606266;
+          font-size: 14px;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
+</style>
+

@@ -3,41 +3,56 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+// 路由懒加载
+const homepage = () => import('@/views/homepage/index');
+const rooms = () => import('@/views/rooms');
+const components = () => import('@/views/rooms/subpage/components');
+const button = () => import('@/views/rooms/subpage/button');
+const icon = () => import('@/views/rooms/subpage/icon');
+const divider = () => import('@/views/rooms/subpage/divider');
+const gird = () => import('@/views/rooms/subpage/gird');
+const dropdown = () => import('@/views/rooms/subpage/dropdown');
+
 export const constantRouters = [
   {
     path: '/zh-CN',
-    component: () => import('@/views/homepage/index'),
+    component: homepage,
   },
   {
     path: '/rooms',
-    component: () => import('@/views/rooms'),
+    component: rooms,
     redirect: '/rooms/components/button',
     children: [
       {
         path: 'components',
         name: '组件',
-        component: () => import('@/views/rooms/subpage/components'),
+        component: components,
         redirect: '/rooms/components/button',
         children: [
           {
             path: 'button',
             name: 'Button组件',
-            component: () => import('@/views/rooms/subpage/button')
+            component: button
           },
           {
             path: 'icon',
             name: 'Icon组件',
-            component: () => import('@/views/rooms/subpage/icon')
+            component: icon
           },
           {
             path: 'divider',
             name: 'Divider组件',
-            component: () => import('@/views/rooms/subpage/divider')
+            component: divider
           },
           {
             path: 'gird',
             name: 'Gird组件',
-            component: () => import('@/views/rooms/subpage/gird')
+            component: gird
+          },
+          {
+            path: 'dropdown',
+            name: 'Dropdown组件',
+            component: dropdown
           },
         ]
       }

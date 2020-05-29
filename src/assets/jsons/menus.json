@@ -58,7 +58,8 @@
         },
         {
           "id": 1122,
-          "title": "Dropdown 下拉菜单"
+          "title": "Dropdown 下拉菜单",
+          "path": "/rooms/components/dropdown"
         },
         {
           "id": 1123, 

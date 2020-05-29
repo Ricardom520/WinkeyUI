@@ -1,5 +1,8 @@
 <template>
-  <div class="wk-row" :style="style">
+  <div :class="[
+                justify ?`wk-row-${justify}` : '',
+                align ? `wk-row-${align}` : '',
+                'wk-row',]" :style="style">
     <slot sName="name"></slot>
   </div>
 </template>
@@ -12,6 +15,14 @@ export default {
       type: [Number, Object, Array],
       default: 0,
       style: ''
+    },
+    justify: {
+      type: String,
+      default: '',
+    },
+    align: {
+      type: String,
+      default: '',
     }
   },
   created() {
@@ -51,5 +62,33 @@ export default {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   flex-flow: row wrap;
+}
+
+/**   justify   */
+.wk-row-center {
+  justify-content: center;
+}
+.wk-row-flex-start {
+  justify-content: flex-start;
+}
+.wk-row-flex-end {
+  justify-content: flex-end;
+}
+.wk-row-space-between {
+  justify-content: space-between;
+}
+.wk-row-space-around {
+  justify-content: space-around;
+}
+
+/**   align  */
+.wk-row-top {
+  align-items: flex-start;
+}
+.wk-row-bottom {
+  align-items: flex-end;
+}
+.wk-row-middle {
+  align-items: center;
 }
 </style>
