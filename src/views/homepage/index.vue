@@ -66,7 +66,7 @@
               </router-link>
             </li>
             <li>
-              <router-link to="/component">
+              <router-link to="/rooms">
                 <div class="card">
                   <img src="@/assets/index/component.png">
                   组件

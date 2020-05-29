@@ -2,7 +2,9 @@
   <div class="rooms">
     <header>
       <div class="logo">
-        <img src="@/assets/logo.png">
+        <router-link to="/">
+          <img src="@/assets/logo.png">
+        </router-link>
       </div>
       <div class="find">
         <img src="@/assets/images/icon/search.svg"><input type="text" placeholder="搜索文档"/>
