@@ -71,6 +71,7 @@ export default {
     white-space: nowrap;
     text-align: center;
     padding: 0 1em;
+    transform: translateY(50%);
   }
 }
 .wk-divider.is-text::before {
