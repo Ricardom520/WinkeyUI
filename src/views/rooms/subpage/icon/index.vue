@@ -137,6 +137,10 @@ export default {
           icon: 'wk-icon-success',
           index: 8
         },
+        {
+          icon: 'wk-icon-sigh',
+          index: 9
+        }
       ]
     }
   },

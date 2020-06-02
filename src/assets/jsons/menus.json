@@ -241,7 +241,8 @@
         },
         {
           "id": 1152,
-          "title": "Message 全局提示"
+          "title": "Message 全局提示",
+          "path": "/rooms/components/message"
         },
         {
           "id": 1153,

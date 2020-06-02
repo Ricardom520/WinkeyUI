@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "6275391",
+      "name": "感叹号",
+      "font_class": "icon-test1",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
       "icon_id": "167188",
       "name": "上传",
       "font_class": "shangchuan",
@@ -67,13 +74,6 @@
       "font_class": "chenggong",
       "unicode": "e61c",
       "unicode_decimal": 58908
-    },
-    {
-      "icon_id": "5183598",
-      "name": "警告",
-      "font_class": "icon-test",
-      "unicode": "e652",
-      "unicode_decimal": 58962
     }
   ]
 }

@@ -9,6 +9,7 @@
               size ? size : '',
             ]"
     :disabled="disabled?'disabled':false"
+    @click="onClick"
   >
   <i :class="loading?'loader':'none'"></i>
   <span>
@@ -54,6 +55,20 @@ export default {
     size: {
       type: String,
       default: ''
+    },
+  },
+  data() {
+    return {}
+  },
+  created() {
+    
+  },
+  mounted() {
+    
+  },
+  methods: {
+    onClick: function() {
+      this.$emit('click')
     }
   }
 }
@@ -100,6 +115,8 @@ export default {
 }
 .wk-button:hover {
   cursor: pointer;
+  color: #409EFF;
+  border: 1px solid #409EFF;
 }
 .wk-button:active {
   color: #409EFF;

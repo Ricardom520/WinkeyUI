@@ -2,28 +2,18 @@
   <div class="Dropdown" ref="Dropdown">
     <div class="middle">
       <section class="box box1">
-        <h2>Dropdown 下拉菜单 </h2>
-        <p>将动作或菜单折叠到下拉菜单中。</p>
+        <h2>Message 消息提示 </h2>
+        <p>常用于主动操作后的反馈提示。与 Notification 的区别是后者更多用于系统级通知的被动提醒。</p>
       </section>
 
       <!--基础使用-->
       <section class="box box2" id="box2">
-        <p class="p1">基础栅格</p>
-        <p>从堆叠到水平排列。</p>
+        <p class="p1">基础用法</p>
+        <p>从顶部出现，3 秒后自动消失。</p>
         <div class="container"  @mouseenter="mouseEnter('box2')" @mouseleave="mouseLeave('box2')">
           <div class="demo">
-            <wk-dropdown>
-              <span class="wk-dropdown-link">
-                下拉菜单<i class="wk-icon-arrow-down wk-icon--right"></i>
-              </span>
-              <wk-dropdown-menu slot="dropdown">
-                <wk-dropdown-item>黄金糕</wk-dropdown-item>
-                <wk-dropdown-item>狮子头</wk-dropdown-item>
-                <wk-dropdown-item>螺蛳粉</wk-dropdown-item>
-                <wk-dropdown-item disabled>双皮奶</wk-dropdown-item>
-                <wk-dropdown-item divided>蚵仔煎</wk-dropdown-item>
-              </wk-dropdown-menu>
-            </wk-dropdown>
+            <wk-button :plain="true" class="demo-button" @click="open" v-bind:test="123">打开信息提示</wk-button>
+            <wk-button :plain="true" class="demo-button" v-bind:test="12334">VNode</wk-button>
             <div class="content" :style="box2?{height: '410px'}:{height:'0px'}">
               <div class="desc" v-html="baseContent"></div>
               <div class="code">
@@ -106,7 +96,7 @@ const highlightCode = () => {
   })
 }
 export default {
-  name: 'icon',
+  name: 'message',
   data() {
     return {
       box2Line: false,
@@ -157,6 +147,10 @@ export default {
     }
   },
   methods: {
+    open() {
+      console.log(this)
+      this.$message('这是一条信息提示')
+    },
     returnTop(e,box) {
       let Button = this.$refs.Dropdown;
       let anchor = this.$refs.anchor;
@@ -343,19 +337,8 @@ export default {
   }
   .box2 {
     margin-top: 50px;
-    .wk-dropdown-link {
-      cursor: pointer;
-      color: #409eff;
-      vertical-align: middle;
-      .wk-icon-arrow-down {
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-        margin-left: 15px;
-        border-left: 1px solid #409eff;
-        border-bottom: 1px solid #409eff;
-        transform: rotate(-45deg) translateY(-5px);
-      }
+    .demo-button {
+      margin: 0 10px;
     }
   }
   .anchor {

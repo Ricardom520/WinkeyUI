@@ -2,12 +2,20 @@ import WkButton from './button/index';
 import WkDivider from './divider/index';
 import WkRow from './row/index';
 import WkCol from './col/index';
+import WkDropdown from './dropdown/index';
+import WkDropdownMenu from './dropdownmenu';
+import WkDropdownItem from './dropdownitem';
+import WkMessage from './message/index';
 
 const components = [
   WkButton,
   WkDivider,
   WkRow,
   WkCol,
+  WkDropdown,
+  WkDropdownItem,
+  WkDropdownMenu,
+  WkMessage
 ]
 
 const install = (Vue) => {
@@ -21,5 +29,8 @@ export default {
   WkButton,
   WkDivider,
   WkRow,
-  WkCol
+  WkCol,
+  WkDropdown,
+  WkDropdownItem,
+  WkDropdownMenu,
 }
