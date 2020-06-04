@@ -140,6 +140,14 @@ export default {
         {
           icon: 'wk-icon-sigh',
           index: 9
+        },
+        {
+          icon: 'wk-icon-fail',
+          index: 10
+        },
+        {
+          icon: 'wk-icon-close',
+          index: 11
         }
       ]
     }

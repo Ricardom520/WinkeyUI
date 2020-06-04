@@ -1,5 +1,5 @@
 <template>
-  <div class="Dropdown" ref="Dropdown">
+  <div class="Message" ref="Message">
     <div class="middle">
       <section class="box box1">
         <h2>Message 消息提示 </h2>
@@ -12,12 +12,11 @@
         <p>从顶部出现，3 秒后自动消失。</p>
         <div class="container"  @mouseenter="mouseEnter('box2')" @mouseleave="mouseLeave('box2')">
           <div class="demo">
-            <wk-button :plain="true" class="demo-button" @click="open" v-bind:test="123">打开信息提示</wk-button>
-            <wk-button :plain="true" class="demo-button" v-bind:test="12334">VNode</wk-button>
-            <div class="content" :style="box2?{height: '410px'}:{height:'0px'}">
+            <wk-button :plain="true" class="demo-button" @click="open">打开信息提示</wk-button>
+            <div class="content" :style="box2?{height: '323px'}:{height:'0px'}">
               <div class="desc" v-html="baseContent"></div>
               <div class="code">
-                <Dropdown-base></Dropdown-base>
+                <MessageBase></MessageBase>
               </div>
             </div>
           </div>
@@ -25,7 +24,87 @@
             <p>
               <i :class="[box2Line?'hovering':'',box2?'active':'']"></i>
               <transition name="fade">
-                <span v-if="box2Line">{{box4?'隐藏代码':'展示代码'}}</span>
+                <span v-if="box2Line">{{box2?'隐藏代码':'展示代码'}}</span>
+              </transition>
+            </p> 
+          </div>
+        </div>
+      </section>
+
+      <!--不同状态-->
+      <section class="box box3" id="box3">
+        <p class="p1">不同状态</p>
+        <p>用来显示「成功、警告、消息、错误」类的操作反馈。</p>
+        <div class="container"  @mouseenter="mouseEnter('box3')" @mouseleave="mouseLeave('box3')">
+          <div class="demo">
+            <wk-button :plain="true" class="demo-button" @click="open1">成功</wk-button>
+            <wk-button :plain="true" class="demo-button" @click="open2">警告</wk-button>
+            <wk-button :plain="true" class="demo-button" @click="open">消息</wk-button>
+            <wk-button :plain="true" class="demo-button" @click="open3">错误</wk-button> 
+            <div class="content" :style="box3?{height: '600px'}:{height:'0px'}">
+              <div class="desc" v-html="statusContent"></div>
+              <div class="code">
+                <MessageStatus></MessageStatus>
+              </div>
+            </div>
+          </div>
+          <div class="showline" @click="showData('box3')">
+            <p>
+              <i :class="[box2Line?'hovering':'',box3?'active':'']"></i>
+              <transition name="fade">
+                <span v-if="box3Line">{{box3?'隐藏代码':'展示代码'}}</span>
+              </transition>
+            </p> 
+          </div>
+        </div>
+      </section>
+
+      <!--可关闭-->
+      <section class="box box4" id="box4">
+        <p class="p1">可关闭</p>
+        <p>可以添加关闭按钮。</p>
+        <div class="container"  @mouseenter="mouseEnter('box4')" @mouseleave="mouseLeave('box4')">
+          <div class="demo">
+            <wk-button :plain="true" class="demo-button" @click="open5">成功</wk-button>
+            <wk-button :plain="true" class="demo-button" @click="open6">警告</wk-button>
+            <wk-button :plain="true" class="demo-button" @click="open4">消息</wk-button>
+            <wk-button :plain="true" class="demo-button" @click="open7">错误</wk-button> 
+            <div class="content" :style="box4?{height: '780px'}:{height:'0px'}">
+              <div class="desc" v-html="closeContent"></div>
+              <div class="code">
+                <MessageClose></MessageClose>
+              </div>
+            </div>
+          </div>
+          <div class="showline" @click="showData('box4')">
+            <p>
+              <i :class="[box4Line?'hovering':'',box4?'active':'']"></i>
+              <transition name="fade">
+                <span v-if="box4Line">{{box4?'隐藏代码':'展示代码'}}</span>
+              </transition>
+            </p> 
+          </div>
+        </div>
+      </section>
+
+      <!--文字居中-->
+      <section class="box box5" id="box5">
+        <p class="p1">文字居中</p>
+        <p>使用 center 属性让文字水平居中。</p>
+        <div class="container"  @mouseenter="mouseEnter('box5')" @mouseleave="mouseLeave('box5')">
+          <div class="demo">
+            <wk-button :plain="true" @click="openCenter">文字居中</wk-button>
+            <div class="content" :style="box5?{height: '270px'}:{height:'0px'}">
+              <div class="code">
+                <MessageCenter></MessageCenter>
+              </div>
+            </div>
+          </div>
+          <div class="showline" @click="showData('box5')">
+            <p>
+              <i :class="[box5Line?'hovering':'',box5?'active':'']"></i>
+              <transition name="fade">
+                <span v-if="box5Line">{{box5?'隐藏代码':'展示代码'}}</span>
               </transition>
             </p> 
           </div>
@@ -33,9 +112,9 @@
       </section>
 
       <!--文本描述-->
-      <section class="box box8" id="box8">
-        <p class="p1">Attributes</p>
-        <DropdownRead></DropdownRead>
+      <section class="box box6" id="box6">
+        <p class="p1">Options</p>
+        <MessageRead></MessageRead>
       </section>
     </div>
 
@@ -43,25 +122,19 @@
     <div class="anchor" ref="anchor">
       <ul>
         <li @click="returnTop($event,'#box2')">
-          设计理念
+          基础用法
         </li>
         <li @click="returnTop($event,'#box3')">
-          概述
+          不同状态
         </li>
         <li @click="returnTop($event,'#box4')">
-          基础栅格
+          可关闭
         </li>
         <li @click="returnTop($event,'#box5')">
-          区块间隔
+          文字居中
         </li>
-        <li @click="returnTop($event,'#box6')">
-          左右偏移
-        </li>
-        <li @click="returnTop($event,'#box7')">
-          对齐
-        </li>
-        <li @click="returnTop($event, '#box8')">
-          Attributes
+        <li @click="returnTop($event, '#box6')">
+          Options
         </li>
       </ul>
     </div>
@@ -69,6 +142,11 @@
 </template>
 
 <script>
+import MessageBase from '@/assets/markdown/message/messageBase.md'
+import MessageStatus from '@/assets/markdown/message/messageStatus.md'
+import MessageClose from '@/assets/markdown/message/messageClose.md'
+import MessageCenter from '@/assets/markdown/message/messageCenter.md'
+import MessageRead from '@/assets/markdown/message/messageRead.md'
 import marked from 'marked'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/atom-one-dark.css'
@@ -101,58 +179,107 @@ export default {
     return {
       box2Line: false,
       box2: false,
+      box3Line: false,
+      box3: false,
       box4Line: false,
       box4: false,
       box5Line: false,
       box5: false,
-      box6Line: false,
-      box6: false,
-      box7Line: false,
-      box7: false,
     }
   },
   components: {
-    
+    MessageBase,
+    MessageStatus,
+    MessageClose,
+    MessageCenter,
+    MessageRead
   },
   mounted() {
-    console.log(this.$message)
     highlightCode()
   },
   computed: {
     baseContent: function() {
-      let detail = '使用单一的一组 `Row` 和 `Col` 栅格组件，就可以创建一个基本的栅格系统，所有列（Col）必须放在 Row 内。';
+      let detail = `Message 在配置上与 Notification 非常类似，所以部分 options 在此不做详尽解释，文末有 options 列表，
+                    可以结合 Notification 的文档理解它们。Element 注册了一个\`$message\`方法用于调用，Message 可以接收一个
+                    字符串或一个 VNode 作为参数，它会被显示为正文内容。`;
         return marked(detail || '', {
           sanitize: true
         });
     },
-    gutterContent: function() {
-      let detail = `栅格常常需要和间隔进行配合，你可以使用 \`Row\` 的 \`gutter\` 属性，我们推荐使用 \`(16+8n)px\` 作为栅格间隔。(n 是自然数)
-                    如果要支持响应式，可以写成 \`{ xs: 8, sm: 16, md: 24, lg: 32 }\`。
-                    如果需要垂直间距，可以写成数组形式 \`[水平间距, 垂直间距]\` \`[16, { xs: 8, sm: 16, md: 24, lg: 32 }]\`。`;
+    statusContent: function() {
+      let detail = `当需要自定义更多属性时，Message 也可以接收一个对象为参数。比如，设置\`type\`字段可以定义不同的状态，默认为\`info\`。
+                    此时正文内容以\`message\`的值传入。同时，我们也为 \`Message\` 的各种 \`type\` 注册了方法，可以在不传入\`type\`字段的情况下
+                    像\`open3\`那样直接调用。`;
         return marked(detail || '', {
           sanitize: true
-        });
+        })
     },
-    offsetContent: function() {
-      let detail = '使用 `offset` 可以将列向右侧偏。例如，`offset={4}` 将元素向右侧偏移了 4 个列（column）的宽度。';
+    closeContent: function() {
+      let detail = `默认的 Message 是不可以被人工关闭的，如果需要可手动关闭的 Message，可以使用\`showClose\`字段。此外，和 Notification 一样，
+                    Message拥有可控的\`duration\`，设置\`0\`为不会被自动关闭，默认为 3000 毫秒。`;
         return marked(detail || '', {
           sanitize: true
-        });
+        })
     },
-    alignmentContent: function() {
-      let detail = '子元素垂直对齐。';
-        return marked(detail || '', {
-          sanitize: true
-        });
-    }
   },
   methods: {
     open() {
-      console.log(this)
       this.$message('这是一条信息提示')
     },
+    open1() {
+      this.$message({
+        message: '恭喜你，这是一条成功信息',
+        type: 'success'
+      })
+    },
+    open2() {
+      this.$message({
+        message: '警告哦，这是一条警告消息',
+        type: 'warning'
+      })
+    },
+    open3() {
+      this.$message.error('错了哦，这是一条错误信息');
+    },
+    open4() {
+      this.$message({
+        showClose: true,
+        message: '这是一条消息提示',
+        duration: 0
+      });
+    },
+    open5() {
+      this.$message({
+        showClose: true,
+        message: '恭喜你，这是一条成功消息',
+        type: 'success',
+        duration: 3000
+      });
+    },
+    open6() {
+      this.$message({
+        showClose: true,
+        message: '警告哦，这是一条警告消息',
+        type: 'warning',
+        duration: 4000
+      });
+    },
+    open7() {
+      this.$message({
+        showClose: true,
+        message: '错了哦，这是一条错误消息',
+        type: 'error',
+        duration: 3000
+      });
+    },
+    openCenter() {
+      this.$message({
+        message: '居中的文字',
+        center: true,
+      });
+    },
     returnTop(e,box) {
-      let Button = this.$refs.Dropdown;
+      let Button = this.$refs.Message;
       let anchor = this.$refs.anchor;
       let lis = anchor.getElementsByTagName('li');
       let target = e.target;
@@ -169,17 +296,14 @@ export default {
         case 'box2':
           this.box2Line = true;
           break;
+        case 'box3':
+          this.box3Line = true;
+          break;
         case 'box4':
           this.box4Line = true;
           break;
         case 'box5':
           this.box5Line = true;
-          break;
-        case 'box6':
-          this.box6Line = true;
-          break;
-        case 'box7':
-          this.box7Line = true;
           break;
       }
     },
@@ -188,17 +312,14 @@ export default {
         case 'box2':
           this.box2Line = false;
           break;
+        case 'box3':
+          this.box3Line = false;
+          break;
         case 'box4':
           this.box4Line = false;
           break;
         case 'box5':
           this.box5Line = false;
-          break;
-        case 'box6':
-          this.box6Line = false;
-          break;
-        case 'box7':
-          this.box7Line = false;
           break;
       }
     },
@@ -207,17 +328,14 @@ export default {
         case 'box2':
           this.box2 = !this.box2;
           break;
+        case 'box3':
+          this.box3 = !this.box3;
+          break;
         case 'box4':
           this.box4 = !this.box4;
           break;
         case 'box5':
           this.box5 = !this.box5;
-          break;
-        case 'box6':
-          this.box6 = !this.box6;
-          break;
-        case 'box7':
-          this.box7 = !this.box7;
           break;
       }
     }
@@ -227,7 +345,7 @@ export default {
 
 
 <style lang="less" scoped>
-.Dropdown {
+.Message {
   display: flex;
   width: 100%;
   margin-bottom: 20px;
@@ -335,7 +453,7 @@ export default {
       }
     }
   }
-  .box2 {
+  .box2, .box3, .box4, .box5, .box6 {
     margin-top: 50px;
     .demo-button {
       margin: 0 10px;
@@ -365,8 +483,8 @@ export default {
 </style>
 
 <style lang="less">
-.Dropdown {
-  .box8 {
+.Message {
+  .box6 {
     h3 {
       margin-top: 26px;
       padding: 20px 0;

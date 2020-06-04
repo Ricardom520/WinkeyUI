@@ -34,17 +34,14 @@ export default {
   },
   created() {
     this.pathname = this.$route.path
-    console.log(this.pathname)
   },
   mounted() {
-    console.log(this.$route.path)
+    
   },
   methods: {
     openMenus: function(e) {
-      console.log("及拿来了m")
       let target = e.target;
       let Component = this.$refs.Component;
-      console.log(Component)
       let as = Component.getElementsByTagName('a');
 
       for (let i = 0; i < as.length; i++) {
