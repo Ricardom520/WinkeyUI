@@ -121,7 +121,8 @@
         },
         {
           "id": 1139,
-          "title": "Switch 开关"
+          "title": "Switch 开关",
+          "path": "/rooms/components/switch"
         },
         {
           "id": 1140,

@@ -13,6 +13,7 @@ const divider = () => import('@/views/rooms/subpage/divider');
 const gird = () => import('@/views/rooms/subpage/gird');
 const dropdown = () => import('@/views/rooms/subpage/dropdown'); // 未完成
 const message = () => import('@/views/rooms/subpage/message');
+const Switch = () => import('@/views/rooms/subpage/switch');
 
 export const constantRouters = [
   {
@@ -59,6 +60,11 @@ export const constantRouters = [
             path: 'message',
             name: 'Message组件',
             component: message
+          },
+          {
+            path: 'switch',
+            name: 'Switch组件',
+            component: Switch
           }
         ]
       }
