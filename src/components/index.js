@@ -7,6 +7,8 @@ import WkDropdownMenu from './dropdownmenu';
 import WkDropdownItem from './dropdownitem';
 import WkMessage from './message/index';
 import WkSwitch from './switch/index';
+import WkSteps from './steps/index';
+import WkStep from './step/index';
 
 const components = [
   WkButton,
@@ -17,7 +19,9 @@ const components = [
   WkDropdownItem,
   WkDropdownMenu,
   WkMessage,
-  WkSwitch
+  WkSwitch,
+  WkSteps,
+  WkStep
 ]
 
 const install = (Vue) => {

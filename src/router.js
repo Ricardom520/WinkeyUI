@@ -14,6 +14,7 @@ const gird = () => import('@/views/rooms/subpage/gird');
 const dropdown = () => import('@/views/rooms/subpage/dropdown'); // 未完成
 const message = () => import('@/views/rooms/subpage/message');
 const Switch = () => import('@/views/rooms/subpage/switch');
+const steps = () => import('@/views/rooms/subpage/steps');
 
 export const constantRouters = [
   {
@@ -65,6 +66,11 @@ export const constantRouters = [
             path: 'switch',
             name: 'Switch组件',
             component: Switch
+          },
+          {
+            path: 'steps',
+            name: 'steps',
+            component: steps
           }
         ]
       }

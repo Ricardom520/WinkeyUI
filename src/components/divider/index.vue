@@ -7,7 +7,7 @@
                 type ? `is-text-${type}` : '',
               ]"
   >
-    <span><slot></slot></span>
+    <span class="wk-divider-inner-text"><slot></slot></span>
   </div>
 </template>
 
@@ -75,7 +75,7 @@ export default {
 }
 .wk-divider.is-text::before {
   position: relative;
-  top: 50%;
+  //top: 50%;
   width: 50%;
   border-top: 1px solid #f0f0f0;
   transform: translateY(50%);
@@ -83,7 +83,7 @@ export default {
 }
 .wk-divider.is-text::after {
   position: relative;
-  top: 50%;
+  //top: 50%;
   width: 50%;
   border-top: 1px solid #f0f0f0;
   transform: translateY(50%);
