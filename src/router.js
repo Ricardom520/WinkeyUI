@@ -15,6 +15,8 @@ const dropdown = () => import('@/views/rooms/subpage/dropdown'); // 未完成
 const message = () => import('@/views/rooms/subpage/message');
 const Switch = () => import('@/views/rooms/subpage/switch');
 const steps = () => import('@/views/rooms/subpage/steps');
+const space = () => import('@/views/rooms/subpage/space');
+const breadcrumb = () => import('@/views/rooms/subpage/breadcrumb');
 
 export const constantRouters = [
   {
@@ -69,8 +71,18 @@ export const constantRouters = [
           },
           {
             path: 'steps',
-            name: 'steps',
+            name: 'steps组件',
             component: steps
+          },
+          {
+            path: 'space',
+            name: 'Space组件',
+            component: space
+          },
+          {
+            path: 'breadcrumb',
+            name: 'breadcrumb',
+            component: breadcrumb
           }
         ]
       }

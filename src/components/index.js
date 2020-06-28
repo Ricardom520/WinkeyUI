@@ -9,6 +9,10 @@ import WkMessage from './message/index';
 import WkSwitch from './switch/index';
 import WkSteps from './steps/index';
 import WkStep from './step/index';
+import WkSpace from './space/index';
+import WkSpaceItem from './spaceitem/index';
+import WkBreadcrumb from './breadcrumb/index';
+import WkBreadcrumbItem from './breadcrumbitem/index';
 
 const components = [
   WkButton,
@@ -21,7 +25,11 @@ const components = [
   WkMessage,
   WkSwitch,
   WkSteps,
-  WkStep
+  WkStep,
+  WkSpace,
+  WkSpaceItem,
+  WkBreadcrumb,
+  WkBreadcrumbItem,
 ]
 
 const install = (Vue) => {
@@ -39,4 +47,8 @@ export default {
   WkDropdown,
   WkDropdownItem,
   WkDropdownMenu,
+  WkSpace,
+  WkSpaceItem,
+  WkStep,
+  WkSteps,
 }

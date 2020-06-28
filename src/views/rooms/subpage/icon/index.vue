@@ -148,6 +148,14 @@ export default {
         {
           icon: 'wk-icon-close',
           index: 11
+        },
+        {
+          icon: 'wk-icon-check',
+          index: 12
+        },
+        {
+          icon: 'wk-icon-arrow-right',
+          index: 13
         }
       ]
     }

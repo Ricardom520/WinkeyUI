@@ -40,7 +40,8 @@
         },
         {
           "id": 1113,
-          "title": "Space 间距"
+          "title": "Space 间距",
+          "path": "/rooms/components/space"
         }
       ]
     },
@@ -49,12 +50,9 @@
       "title": "导航",
       "children": [
         {
-          "id": 1120,
-          "title": "Affix 固钉"
-        },
-        {
           "id": 1121,
-          "title": "Breadcrumb 面包屑"
+          "title": "Breadcrumb 面包屑",
+          "path": "/rooms/components/breadcrumb"
         },
         {
           "id": 1122,
