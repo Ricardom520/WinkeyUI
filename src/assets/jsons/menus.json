@@ -65,7 +65,8 @@
         },
         {
           "id": 1124,
-          "title": "Pagination 分页"
+          "title": "Pagination 分页",
+          "path": "/rooms/components/pagination"
         },
         {
           "id": 1125,
@@ -108,7 +109,8 @@
         },
         {
           "id": 1136,
-          "title": "Input 输入框"
+          "title": "Input 输入框",
+          "path": "/rooms/components/input"
         },
         {
           "id": 1137,

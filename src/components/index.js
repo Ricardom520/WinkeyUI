@@ -1,18 +1,20 @@
-import WkButton from './button/index';
-import WkDivider from './divider/index';
-import WkRow from './row/index';
-import WkCol from './col/index';
-import WkDropdown from './dropdown/index';
+import WkButton from './button';
+import WkDivider from './divider';
+import WkRow from './row';
+import WkCol from './col';
+import WkDropdown from './dropdown';
 import WkDropdownMenu from './dropdownmenu';
 import WkDropdownItem from './dropdownitem';
-import WkMessage from './message/index';
-import WkSwitch from './switch/index';
-import WkSteps from './steps/index';
-import WkStep from './step/index';
-import WkSpace from './space/index';
-import WkSpaceItem from './spaceitem/index';
-import WkBreadcrumb from './breadcrumb/index';
-import WkBreadcrumbItem from './breadcrumbitem/index';
+import WkMessage from './message';
+import WkSwitch from './switch';
+import WkSteps from './steps';
+import WkStep from './step';
+import WkSpace from './space';
+import WkSpaceItem from './spaceitem';
+import WkBreadcrumb from './breadcrumb';
+import WkBreadcrumbItem from './breadcrumbitem';
+import WkPagination from './pagination';
+import WkInput from './input';
 
 const components = [
   WkButton,
@@ -30,6 +32,8 @@ const components = [
   WkSpaceItem,
   WkBreadcrumb,
   WkBreadcrumbItem,
+  WkPagination,
+  WkInput,
 ]
 
 const install = (Vue) => {
@@ -51,4 +55,5 @@ export default {
   WkSpaceItem,
   WkStep,
   WkSteps,
+  WkInput,
 }

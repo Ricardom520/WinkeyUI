@@ -6,6 +6,48 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "4294072",
+      "name": "日历",
+      "font_class": "rili",
+      "unicode": "e785",
+      "unicode_decimal": 59269
+    },
+    {
+      "icon_id": "827783",
+      "name": "眼睛",
+      "font_class": "yanjing",
+      "unicode": "e681",
+      "unicode_decimal": 59009
+    },
+    {
+      "icon_id": "9974429",
+      "name": "省略号",
+      "font_class": "shenglvehao",
+      "unicode": "e708",
+      "unicode_decimal": 59144
+    },
+    {
+      "icon_id": "15463261",
+      "name": "双箭头-右",
+      "font_class": "shuangjiantou-you",
+      "unicode": "e6c4",
+      "unicode_decimal": 59076
+    },
+    {
+      "icon_id": "15463264",
+      "name": "双箭头-左",
+      "font_class": "shuangjiantou-zuo",
+      "unicode": "e6c5",
+      "unicode_decimal": 59077
+    },
+    {
+      "icon_id": "9021537",
+      "name": "左箭头",
+      "font_class": "zuojiantou",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
       "icon_id": "1206014",
       "name": "right",
       "font_class": "right",

@@ -17,6 +17,8 @@ const Switch = () => import('@/views/rooms/subpage/switch');
 const steps = () => import('@/views/rooms/subpage/steps');
 const space = () => import('@/views/rooms/subpage/space');
 const breadcrumb = () => import('@/views/rooms/subpage/breadcrumb');
+const pagination = () => import('@/views/rooms/subpage/pagination'); // 未完成
+const Input = () => import('@/views/rooms/subpage/input');
 
 export const constantRouters = [
   {
@@ -71,7 +73,7 @@ export const constantRouters = [
           },
           {
             path: 'steps',
-            name: 'steps组件',
+            name: 'Steps组件',
             component: steps
           },
           {
@@ -81,8 +83,18 @@ export const constantRouters = [
           },
           {
             path: 'breadcrumb',
-            name: 'breadcrumb',
+            name: 'Breadcrumb组件',
             component: breadcrumb
+          },
+          {
+            path: 'pagination',
+            name: 'Pagination组件',
+            component: pagination
+          },
+          {
+            path: 'input',
+            name: 'Input组件',
+            component: Input
           }
         ]
       }

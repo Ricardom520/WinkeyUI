@@ -156,6 +156,30 @@ export default {
         {
           icon: 'wk-icon-arrow-right',
           index: 13
+        },
+        {
+          icon: 'wk-icon-arrow-left',
+          index: 14
+        },
+        {
+          icon: 'wk-icon-ellipsis',
+          index: 15
+        },
+        {
+          icon: 'wk-icon-dbarrow-right',
+          index: 16
+        },
+        {
+          icon: 'wk-icon-dbarrow-left',
+          index: 17
+        },
+        {
+          icon: 'wk-icon-eyes',
+          index: 18
+        },
+        {
+          icon: 'wk-icon-date',
+          index: 19
         }
       ]
     }
