@@ -180,6 +180,106 @@ export default {
         {
           icon: 'wk-icon-date',
           index: 19
+        },
+        {
+          icon: 'wk-icon-password',
+          index: 20
+        },
+        {
+          icon: 'wk-icon-user',
+          index: 21,
+        },
+        {
+          icon: 'wk-icon-setting',
+          index: 22
+        },
+        {
+          icon: 'wk-icon-home',
+          index: 23
+        },
+        {
+          icon: 'wk-icon-maillist',
+          index: 24
+        },
+        {
+          icon: 'wk-icon-person',
+          index: 25
+        },
+        {
+          icon: 'wk-icon-bicycle',
+          index: 26
+        },
+        {
+          icon: 'wk-icon-ship',
+          index: 27
+        },
+        {
+          icon: 'wk-icon-schoolCar',
+          index: 28
+        },
+        {
+          icon: 'wk-icon-truck',
+          index: 29
+        },
+        {
+          icon: 'wk-icon-camera',
+          index: 30
+        },
+        {
+          icon: 'wk-icon-map',
+          index: 31
+        },
+        {
+          icon: 'wk-icon-hamburger',
+          index: 32
+        },
+        {
+          icon: 'wk-icon-iceCream',
+          index: 33
+        },
+        {
+          icon: 'wk-icon-frenchFries',
+          index: 34
+        },
+        {
+          icon: 'wk-icon-compass',
+          index: 35
+        },
+        {
+          icon: 'wk-icon-plane',
+          index: 36
+        },
+        {
+          icon: 'wk-icon-computer',
+          index: 37
+        },
+        {
+          icon: 'wk-icon-batterycar',
+          index: 38
+        },
+        {
+          icon: 'wk-icon-cola',
+          index: 39
+        },
+        {
+          icon: 'wk-icon-motorcycle',
+          index: 40
+        },
+        {
+          icon: 'wk-icon-phone',
+          index: 41
+        },
+        {
+          icon: 'wk-icon-car',
+          index: 42
+        },
+        {
+          icon: 'wk-icon-lick',
+          index: 43
+        },
+        {
+          icon: 'wk-icon-dynamicSharing',
+          index: 44
         }
       ]
     }

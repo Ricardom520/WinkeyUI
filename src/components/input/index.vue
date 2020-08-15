@@ -139,8 +139,6 @@ export default {
       this.suffix = false
     },
     keyup(e) {
-      console.log(e.target.style.height)
-      console.log(e.target.scrollHeight)
       if (parseInt(e.target.style.height) < e.target.scrollHeight + 5) {
         this.row += 26
       } else {
