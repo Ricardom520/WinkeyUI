@@ -11,7 +11,7 @@ const button = () => import('@/views/rooms/subpage/button');
 const icon = () => import('@/views/rooms/subpage/icon');
 const divider = () => import('@/views/rooms/subpage/divider');
 const gird = () => import('@/views/rooms/subpage/gird');
-const dropdown = () => import('@/views/rooms/subpage/dropdown'); // 未完成
+// const dropdown = () => import('@/views/rooms/subpage/dropdown'); // 未完成
 const message = () => import('@/views/rooms/subpage/message');
 const Switch = () => import('@/views/rooms/subpage/switch');
 const steps = () => import('@/views/rooms/subpage/steps');
@@ -59,7 +59,7 @@ export const constantRouters = [
           {
             path: 'dropdown',
             name: 'Dropdown组件',
-            component: dropdown
+            // component: dropdown
           },
           {
             path: 'message',

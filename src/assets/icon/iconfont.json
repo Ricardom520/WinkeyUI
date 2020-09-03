@@ -6,6 +6,62 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1487150",
+      "name": "游戏达人-01-01",
+      "font_class": "youxidaren--",
+      "unicode": "e7c6",
+      "unicode_decimal": 59334
+    },
+    {
+      "icon_id": "1617458",
+      "name": "达人",
+      "font_class": "daren",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "2198803",
+      "name": "旗子",
+      "font_class": "flag",
+      "unicode": "e73c",
+      "unicode_decimal": 59196
+    },
+    {
+      "icon_id": "4425842",
+      "name": "编辑",
+      "font_class": "bianji",
+      "unicode": "e7a1",
+      "unicode_decimal": 59297
+    },
+    {
+      "icon_id": "11494970",
+      "name": "闭眼",
+      "font_class": "biyan",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "11734519",
+      "name": "dark,夜间模式,黑夜模式,深色模式,暗黑模式",
+      "font_class": "dark",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "12687173",
+      "name": "日间",
+      "font_class": "icon-",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "2506215",
+      "name": "邮箱",
+      "font_class": "youxiang",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
       "icon_id": "2250164",
       "name": "动态分享",
       "font_class": "dongtaifenxiang",

@@ -2,7 +2,7 @@ import WkButton from './button';
 import WkDivider from './divider';
 import WkRow from './row';
 import WkCol from './col';
-import WkDropdown from './dropdown';
+// import WkDropdown from './dropdown';
 import WkDropdownMenu from './dropdownmenu';
 import WkDropdownItem from './dropdownitem';
 import WkMessage from './message';
@@ -21,7 +21,7 @@ const components = [
   WkDivider,
   WkRow,
   WkCol,
-  WkDropdown,
+  // WkDropdown,
   WkDropdownItem,
   WkDropdownMenu,
   WkMessage,
@@ -48,7 +48,7 @@ export default {
   WkDivider,
   WkRow,
   WkCol,
-  WkDropdown,
+  // WkDropdown,
   WkDropdownItem,
   WkDropdownMenu,
   WkSpace,

@@ -280,6 +280,38 @@ export default {
         {
           icon: 'wk-icon-dynamicSharing',
           index: 44
+        },
+        {
+          icon: 'wk-icon-email',
+          index: 55
+        },
+        {
+          icon: 'wk-icon-daytime',
+          index: 56
+        },
+        {
+          icon: 'wk-icon-dark',
+          index: 57
+        },
+        {
+          icon: 'wk-icon-closeeyes',
+          index: 58
+        },
+        {
+          icon: 'wk-icon-editor',
+          index: 59
+        },
+        {
+          icon: 'wk-icon-flag',
+          index: 60
+        },
+        {
+          icon: 'wk-icon-talent',
+          index: 61
+        },
+        {
+          icon: 'wk-icon-game',
+          index: 62
         }
       ]
     }
